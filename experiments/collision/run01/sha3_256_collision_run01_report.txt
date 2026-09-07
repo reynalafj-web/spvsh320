@@ -1,0 +1,97 @@
+============================================================
+  MULTICORE TRUNCATED COLLISION EXPERIMENT
+  Algorithm  : SHA-3-256
+============================================================
+
+[Methodology]
+Collision method        : Pollard rho with Floyd tortoise-and-hare
+Projection              : rightmost t bits of 256-bit digest
+Transition              : F_t(x)=rightmost_t(SHA3-256(LE64(salt)||LE64(x)))
+Message length          : 16 bytes
+Maximum phase-1 steps   : 4294967296
+Max seed attempts       : 16
+Worker budget           : 50
+Expected baseline       : sqrt(pi/2) * 2^(t/2)
+
+[SHA-3-256 Parameters]
+Permutation             : Keccak-f[1600]
+Rounds                  : 24
+Digest output           : 256 bits
+Capacity                : 512 bits
+Rate                    : 1088 bits
+Seed                    : 0, unseeded mode
+
+[Summary]
+t = 16 bits
+  repetitions              : 50
+  success_count            : 50
+  expected_collision_steps : 320.8484
+  mean_collision_index     : 288.3200
+  median_collision_index   : 270.0000
+  min_collision_index      : 26
+  max_collision_index      : 679
+  mean_hash_evaluations    : 1534.6400
+  mean_ratio_to_expected   : 0.89861749
+  mean_seconds             : 0.002726
+
+t = 24 bits
+  repetitions              : 50
+  success_count            : 50
+  expected_collision_steps : 5133.5747
+  mean_collision_index     : 5587.6600
+  median_collision_index   : 5285.0000
+  min_collision_index      : 863
+  max_collision_index      : 12792
+  mean_hash_evaluations    : 30147.9800
+  mean_ratio_to_expected   : 1.08845401
+  mean_seconds             : 0.029638
+
+t = 32 bits
+  repetitions              : 50
+  success_count            : 50
+  expected_collision_steps : 82137.1953
+  mean_collision_index     : 85716.6600
+  median_collision_index   : 80238.0000
+  min_collision_index      : 15842
+  max_collision_index      : 171848
+  mean_hash_evaluations    : 472609.6200
+  mean_ratio_to_expected   : 1.04357910
+  mean_seconds             : 0.408323
+
+t = 40 bits
+  repetitions              : 30
+  success_count            : 30
+  expected_collision_steps : 1314195.1248
+  mean_collision_index     : 1426706.0333
+  median_collision_index   : 1231253.0000
+  min_collision_index      : 196939
+  max_collision_index      : 2411190
+  mean_hash_evaluations    : 7480940.0333
+  mean_ratio_to_expected   : 1.08561203
+  mean_seconds             : 5.107674
+
+t = 48 bits
+  repetitions              : 10
+  success_count            : 10
+  expected_collision_steps : 21027121.9976
+  mean_collision_index     : 21155066.7000
+  median_collision_index   : 20866753.0000
+  min_collision_index      : 5946447
+  max_collision_index      : 33341295
+  mean_hash_evaluations    : 118999470.6000
+  mean_ratio_to_expected   : 1.00608475
+  mean_seconds             : 81.276558
+
+t = 56 bits
+  repetitions              : 5
+  success_count            : 5
+  expected_collision_steps : 336433951.9615
+  mean_collision_index     : 211686232.0000
+  median_collision_index   : 197611437.0000
+  min_collision_index      : 43770348
+  max_collision_index      : 412037859
+  mean_hash_evaluations    : 1122016862.0000
+  mean_ratio_to_expected   : 0.62920591
+  mean_seconds             : 766.460536
+
+=== EXPERIMENT COMPLETED ===

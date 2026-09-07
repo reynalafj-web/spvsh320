@@ -1,0 +1,14 @@
+\begin{table}[ht]
+\caption{SMHasher3 official totals. SHA-3-256 ran the built-in cryptographic profile (237 tests). VSH-256 and SpVSH-320 ran the 252-test adapter profile. Seed zero on the adapters matches the unseeded paper constructions.}
+\label{tab:smhasher3}
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Hash & Result & Passed / scheduled & Wall time (s) \\
+\midrule
+VSH-256 & fail & 125 / 252 & 72\,658 \\
+SpVSH-320 & pass & 252 / 252 & 32\,053 \\
+SHA-3-256 & pass & 237 / 237 & 8\,671 \\
+\bottomrule
+\end{tabular}
+\end{table}

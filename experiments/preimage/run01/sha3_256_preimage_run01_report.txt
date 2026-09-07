@@ -1,0 +1,97 @@
+============================================================
+  MULTICORE UNIFORM TRUNCATED PREIMAGE EXPERIMENT
+  Algorithm  : SHA-3-256
+============================================================
+
+[Methodology]
+Target generation       : leftmost t bits of SHA3-256(target_message)
+Candidate generation    : 8-byte little-endian encoding of counter i
+Candidate length        : 8 bytes
+Scheduler               : dynamic_work_stealing
+Search mode             : dynamic chunk-based work stealing across unfinished repetitions
+Trial interpretation    : total candidate hashes evaluated until success
+Maximum trials per rep  : 1099511627776
+Chunk size              : 4096
+Worker budget           : 50
+Expected baseline       : 2^t
+
+[SHA-3-256 Parameters]
+Permutation             : Keccak-f[1600]
+Rounds                  : 24
+Digest output           : 256 bits
+Capacity                : 512 bits
+Rate                    : 1088 bits
+Seed                    : 0, unseeded mode
+
+[Summary]
+t = 8 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 0
+  expected_trials       : 256
+  mean_trials           : 303.9600
+  median_trials         : 290.5000
+  min_trials            : 5
+  max_trials            : 960
+  stddev_trials         : 217.6288
+  mean_log2_trials      : 7.607310
+  mean_ratio_to_expected: 1.18734375
+  mean_seconds          : 0.001678
+
+t = 16 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 0
+  expected_trials       : 65536
+  mean_trials           : 76702.1000
+  median_trials         : 49015.0000
+  min_trials            : 1048
+  max_trials            : 355764
+  stddev_trials         : 86424.6939
+  mean_log2_trials      : 15.159057
+  mean_ratio_to_expected: 1.17038116
+  mean_seconds          : 0.037167
+
+t = 24 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 0
+  expected_trials       : 16777216
+  mean_trials           : 18993244.8600
+  median_trials         : 12524167.0000
+  min_trials            : 649439
+  max_trials            : 137463406
+  stddev_trials         : 23067559.5577
+  mean_log2_trials      : 23.395853
+  mean_ratio_to_expected: 1.13208561
+  mean_seconds          : 9.816445
+
+t = 32 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 0
+  expected_trials       : 4294967296
+  mean_trials           : 4795371613.4400
+  median_trials         : 3297181952.5000
+  min_trials            : 57071720
+  max_trials            : 30207680584
+  stddev_trials         : 5475787920.2086
+  mean_log2_trials      : 31.143523
+  mean_ratio_to_expected: 1.11650946
+  mean_seconds          : 2419.332651
+
+t = 36 bits
+  repetitions           : 30
+  success_count         : 30
+  lanes_per_rep         : 0
+  expected_trials       : 68719476736
+  mean_trials           : 90193906834.2333
+  median_trials         : 56244801006.0000
+  min_trials            : 1353484417
+  max_trials            : 442933740954
+  stddev_trials         : 91295393284.6915
+  mean_log2_trials      : 35.661053
+  mean_ratio_to_expected: 1.31249409
+  mean_seconds          : 29146.194478
+
+=== EXPERIMENT COMPLETED ===

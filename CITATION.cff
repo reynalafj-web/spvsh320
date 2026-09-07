@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "SpVSH-320 reproducibility package"
+message: "If you use this software or the experiment outputs, please cite this snapshot and the corresponding article."
+type: software
+authors:
+  - family-names: Alfajri
+    given-names: Reynaldi
+  - family-names: Afianti
+    given-names: Farah
+    affiliation: Telkom University
+license: MIT
+version: paper-v1
+date-released: "2026-09-03"
+keywords:
+  - hash function
+  - sponge construction
+  - VSH
+  - lightweight cryptography
+  - IoT
+  - preimage experiment
+  - reproducibility
+identifiers: []
+# After Zenodo mints a DOI, add:
+# identifiers:
+#   - type: doi
+#     value: 10.5281/zenodo.XXXXXXX
+# Also add repository-code: https://github.com/ORG/spvsh320

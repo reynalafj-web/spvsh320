@@ -1,0 +1,95 @@
+============================================================
+  MULTICORE UNIFORM TRUNCATED PREIMAGE EXPERIMENT
+  Algorithm  : VSH-256
+============================================================
+
+[Methodology]
+Target generation       : leftmost t bits of Hash(target_message)
+Candidate generation    : 8-byte little-endian encoding of counter i
+Candidate length        : 8 bytes
+Search mode             : parallel disjoint chunked candidate search
+Trial interpretation    : total candidate hashes evaluated until success
+Maximum trials per rep  : 1099511627776
+Chunk size              : 4096
+Worker budget           : 50
+Expected baseline       : 2^t
+
+[VSH Parameters]
+p                       : 0xffffffffffffffffffffffffffffff61
+q                       : 0xfffffffffffffffffffffffffffffeed
+n = p*q                 : 0xfffffffffffffffffffffffffffffe4e0000000000000000000000000000aacd
+Modulus bit-length      : 256 bits
+Computed VSH k          : 43
+
+[Summary]
+t = 8 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 1
+  expected_trials       : 256
+  mean_trials           : 180408.6400
+  median_trials         : 191456.0000
+  min_trials            : 98112
+  max_trials            : 262004
+  stddev_trials         : 51717.4299
+  mean_log2_trials      : 17.398196
+  mean_ratio_to_expected: 704.72125000
+  mean_seconds          : 0.090277
+
+t = 16 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 1
+  expected_trials       : 65536
+  mean_trials           : 1179446.7600
+  median_trials         : 998872.0000
+  min_trials            : 384912
+  max_trials            : 3270560
+  stddev_trials         : 525562.5400
+  mean_log2_trials      : 20.044470
+  mean_ratio_to_expected: 17.99692932
+  mean_seconds          : 0.567921
+
+t = 24 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 1
+  expected_trials       : 16777216
+  mean_trials           : 34894867.0000
+  median_trials         : 29122085.5000
+  min_trials            : 1514944
+  max_trials            : 95164496
+  stddev_trials         : 22636492.6902
+  mean_log2_trials      : 24.723988
+  mean_ratio_to_expected: 2.07989615
+  mean_seconds          : 18.600926
+
+t = 32 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 1
+  expected_trials       : 4294967296
+  mean_trials           : 4911804594.1600
+  median_trials         : 3758087538.5000
+  min_trials            : 28464062
+  max_trials            : 20757382084
+  stddev_trials         : 4796110203.5479
+  mean_log2_trials      : 31.330999
+  mean_ratio_to_expected: 1.14361863
+  mean_seconds          : 3178.129815
+
+t = 36 bits
+  repetitions           : 30
+  success_count         : 30
+  lanes_per_rep         : 1
+  expected_trials       : 68719476736
+  mean_trials           : 81539036957.9000
+  median_trials         : 62462583534.0000
+  min_trials            : 9322549184
+  max_trials            : 335463182319
+  stddev_trials         : 68428350157.6390
+  mean_log2_trials      : 35.854931
+  mean_ratio_to_expected: 1.18654915
+  mean_seconds          : 51307.343263
+
+=== EXPERIMENT COMPLETED ===

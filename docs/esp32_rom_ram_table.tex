@@ -1,0 +1,14 @@
+\begin{table}[ht]
+\caption{ESP32 sketch size and heap at boot for the standardized harness. Heap did not change during hashing.}
+\label{tab:esp32-romram}
+\centering
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Hash & Sketch (B) & Free heap (B) & Min free heap (B) & Max alloc (B) \\
+\midrule
+VSH-256 & 898\,224 & 290\,284 & 284\,372 & 110\,580 \\
+SpVSH-320 & 899\,280 & 290\,284 & 284\,372 & 110\,580 \\
+SHA-3-256 & 899\,408 & 290\,284 & 284\,372 & 110\,580 \\
+\bottomrule
+\end{tabular}
+\end{table}

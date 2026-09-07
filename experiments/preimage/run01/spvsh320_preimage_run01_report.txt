@@ -1,0 +1,99 @@
+============================================================
+  MULTICORE UNIFORM TRUNCATED PREIMAGE EXPERIMENT
+  Algorithm  : SpVSH-320
+============================================================
+
+[Methodology]
+Target generation       : leftmost t bits of Hash(target_message)
+Candidate generation    : 8-byte little-endian encoding of counter i
+Candidate mode          : sequential_counter
+Candidate seed          : 0xd1b54a32d192ed03
+Candidate length        : 8 bytes
+Finalization rounds    : 2 extra PermuteSpVSH call(s) before first output
+Scheduler               : dynamic_work_stealing_safe
+Search mode             : dynamic chunk-based work stealing across unfinished repetitions
+Trial interpretation    : total candidate hashes evaluated until success
+Maximum trials per rep  : 1099511627776
+Chunk size              : 4096
+Worker budget           : 50
+Expected baseline       : 2^t
+
+[SpVSH-320 Parameters]
+Internal state          : 5 x 64-bit lanes = 320 bits
+Digest output           : 256 bits
+Rate lane               : S0, 64 bits
+Moduli                  : P1 = 2^64 - 59, P2 = 2^64 - 83
+Small-prime table       : 64 small odd primes
+
+[Summary]
+t = 8 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 0
+  expected_trials       : 256
+  mean_trials           : 267.6600
+  median_trials         : 199.0000
+  min_trials            : 3
+  max_trials            : 1059
+  stddev_trials         : 282.7310
+  mean_log2_trials      : 7.133913
+  mean_ratio_to_expected: 1.04554688
+  mean_seconds          : 0.001460
+
+t = 16 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 0
+  expected_trials       : 65536
+  mean_trials           : 54000.5000
+  median_trials         : 43380.0000
+  min_trials            : 933
+  max_trials            : 195897
+  stddev_trials         : 49956.8302
+  mean_log2_trials      : 14.845748
+  mean_ratio_to_expected: 0.82398224
+  mean_seconds          : 0.032400
+
+t = 24 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 0
+  expected_trials       : 16777216
+  mean_trials           : 15603480.9400
+  median_trials         : 8879852.5000
+  min_trials            : 45711
+  max_trials            : 97043218
+  stddev_trials         : 17771627.8959
+  mean_log2_trials      : 22.921598
+  mean_ratio_to_expected: 0.93003994
+  mean_seconds          : 9.012208
+
+t = 32 bits
+  repetitions           : 50
+  success_count         : 50
+  lanes_per_rep         : 0
+  expected_trials       : 4294967296
+  mean_trials           : 4327455364.9000
+  median_trials         : 3706952108.0000
+  min_trials            : 145952130
+  max_trials            : 20942254306
+  stddev_trials         : 4183508690.4944
+  mean_log2_trials      : 31.243427
+  mean_ratio_to_expected: 1.00756422
+  mean_seconds          : 2665.271656
+
+t = 36 bits
+  repetitions           : 30
+  success_count         : 30
+  lanes_per_rep         : 0
+  expected_trials       : 68719476736
+  mean_trials           : 75611880777.6000
+  median_trials         : 41037032852.5000
+  min_trials            : 3273900006
+  max_trials            : 392308485244
+  stddev_trials         : 97283566736.0689
+  mean_log2_trials      : 35.273931
+  mean_ratio_to_expected: 1.10029768
+  mean_seconds          : 23867.586016
+
+=== EXPERIMENT COMPLETED ===

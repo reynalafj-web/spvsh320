@@ -1,0 +1,4 @@
+algorithm,overall,passed,total,seconds,verification
+VSH-256,FAIL,125,252,72657.645533,SKIP_unverifiable
+SpVSH-320,pass,252,252,32053.094484,SKIP_unverifiable
+SHA-3-256,pass,237,237,8670.841899,PASS_0x79AEFB60

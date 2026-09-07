@@ -1,0 +1,28 @@
+# SpVSH-320-FR2 known-answer tests
+# Digest is 32 bytes, lowercase hex.
+# These values were produced by include/spvsh320.h + src/spvsh320.c
+# and match the unseeded ESP32 / SMHasher3 adapters (seed = 0).
+#
+# finalization_rounds = 2
+# padding = 0x80 in the first unused byte of the last 8-byte block
+# squeeze = four little-endian copies of lane s0, with one permute between words
+
+# empty message
+msg_hex =
+digest = 078cabc9e5e01e0ddbc0dad553b4b73a945e777a870e21c3d93166ff6d48728d
+
+# ASCII "abc"
+msg_hex = 616263
+digest = b93de3c241637be1fee467413f12e749796c8d239130cc281619e2d750afc7b8
+
+# bytes 00 01 02 03 04 05 06 07
+msg_hex = 0001020304050607
+digest = 538dc98863e45617b391e67f8e9a0391cb10c287069a855fcecd546ee00a8c7b
+
+# bytes 00..08 (9 bytes)
+msg_hex = 000102030405060708
+digest = 84bf6f6ccc0d63ab28f55f503c0606de61eaa9f7da0aa395b3ff89ae756aa748
+
+# bytes 00..63 (64 bytes)
+msg_hex = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f
+digest = 12e8f68cba190aa03d98803b1899f95cf1803667ec318f6067af4111d785c0d0

@@ -1,0 +1,14 @@
+NIST STS Input Generator: SpVSH-320-FR2
+output_path=spvsh320_fr2_nist_1000x1M.bin
+format=binary
+sequences=1000
+bits_per_sequence=1000000
+total_bits=1000000000
+total_bytes=125000000
+total_hashes=3907000
+message_format=LE64(domain_salt)||LE64(sequence_index)||LE64(block_counter)
+domain_salt=0x5350565348333230
+start_sequence=0
+digest_bits=256
+finalization_rounds=2
+seconds=6.203487

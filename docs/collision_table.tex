@@ -1,0 +1,32 @@
+\begin{table}[ht]
+\caption{Reduced-target collision search with Pollard's rho and Floyd's method. The ratio is the mean collision index \(\mu+\lambda\) divided by \(\sqrt{\pi/2}\,2^{t/2}\). All repetitions succeeded.}
+\label{tab:collision_run01}
+\centering
+\small
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Algorithm & \(t\) & Success & Mean \(I_{\mathrm{coll}}\) & Expected & Mean ratio & Median ratio \\
+\midrule
+VSH-256 & 16 & 50/50 & \(3.33\times 10^{2}\) & \(3.21\times 10^{2}\) & 1.04 & 1.06 \\
+VSH-256 & 24 & 50/50 & \(5.07\times 10^{3}\) & \(5.13\times 10^{3}\) & 0.99 & 1.08 \\
+VSH-256 & 32 & 50/50 & \(7.78\times 10^{4}\) & \(8.21\times 10^{4}\) & 0.95 & 0.86 \\
+VSH-256 & 40 & 30/30 & \(1.33\times 10^{6}\) & \(1.31\times 10^{6}\) & 1.01 & 0.97 \\
+VSH-256 & 48 & 10/10 & \(2.10\times 10^{7}\) & \(2.10\times 10^{7}\) & 1.00 & 0.75 \\
+VSH-256 & 56 & 5/5 & \(2.83\times 10^{8}\) & \(3.36\times 10^{8}\) & 0.84 & 1.10 \\
+\midrule
+SpVSH-320 & 16 & 50/50 & \(2.90\times 10^{2}\) & \(3.21\times 10^{2}\) & 0.90 & 0.86 \\
+SpVSH-320 & 24 & 50/50 & \(5.42\times 10^{3}\) & \(5.13\times 10^{3}\) & 1.06 & 0.90 \\
+SpVSH-320 & 32 & 50/50 & \(7.39\times 10^{4}\) & \(8.21\times 10^{4}\) & 0.90 & 0.74 \\
+SpVSH-320 & 40 & 30/30 & \(1.43\times 10^{6}\) & \(1.31\times 10^{6}\) & 1.09 & 1.03 \\
+SpVSH-320 & 48 & 10/10 & \(2.20\times 10^{7}\) & \(2.10\times 10^{7}\) & 1.04 & 0.96 \\
+SpVSH-320 & 56 & 5/5 & \(4.05\times 10^{8}\) & \(3.36\times 10^{8}\) & 1.20 & 1.58 \\
+\midrule
+SHA-3-256 & 16 & 50/50 & \(2.88\times 10^{2}\) & \(3.21\times 10^{2}\) & 0.90 & 0.84 \\
+SHA-3-256 & 24 & 50/50 & \(5.59\times 10^{3}\) & \(5.13\times 10^{3}\) & 1.09 & 1.03 \\
+SHA-3-256 & 32 & 50/50 & \(8.57\times 10^{4}\) & \(8.21\times 10^{4}\) & 1.04 & 0.98 \\
+SHA-3-256 & 40 & 30/30 & \(1.43\times 10^{6}\) & \(1.31\times 10^{6}\) & 1.09 & 0.94 \\
+SHA-3-256 & 48 & 10/10 & \(2.12\times 10^{7}\) & \(2.10\times 10^{7}\) & 1.01 & 0.99 \\
+SHA-3-256 & 56 & 5/5 & \(2.12\times 10^{8}\) & \(3.36\times 10^{8}\) & 0.63 & 0.59 \\
+\bottomrule
+\end{tabular}
+\end{table}

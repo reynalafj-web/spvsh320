@@ -1,0 +1,102 @@
+============================================================
+  TRUNCATED COLLISION EXPERIMENT
+  Algorithm  : SpVSH-320
+  Method     : Pollard rho with Floyd cycle finding
+============================================================
+
+[Methodology]
+Transition function    : F_t(x) = rightmost_t(Hash(LE64(salt_{t,r}) || LE64(x)))
+Projection rule        : rightmost t bits, equivalent to H mod 2^t
+Message format         : LE64(salt_{t,r}) || LE64(x)
+Collision extraction   : predecessors x_(mu-1) and x_(mu+lambda-1)
+Expected baseline      : sqrt(pi/2) * 2^(t/2)
+Maximum phase steps    : 4294967296
+Maximum seed attempts  : 64
+Worker budget          : 50
+Finalization rounds    : 2
+
+[Summary]
+t = 16 bits
+  repetitions             : 50
+  success_count           : 50
+  expected_collision_steps: 320.848419
+  mean_collision_index    : 289.7200
+  median_collision_index  : 275.5000
+  min_collision_index     : 17
+  max_collision_index     : 691
+  stddev_collision_index  : 154.5420
+  mean_hash_evaluations   : 1504.4200
+  mean_log2_collision_idx : 7.890880
+  mean_ratio_to_expected  : 0.90298092
+  mean_seconds            : 0.004960
+
+t = 24 bits
+  repetitions             : 50
+  success_count           : 50
+  expected_collision_steps: 5133.574706
+  mean_collision_index    : 5423.4600
+  median_collision_index  : 4623.5000
+  min_collision_index     : 568
+  max_collision_index     : 14769
+  stddev_collision_index  : 3177.3453
+  mean_hash_evaluations   : 30617.5000
+  mean_log2_collision_idx : 12.108803
+  mean_ratio_to_expected  : 1.05646851
+  mean_seconds            : 0.053486
+
+t = 32 bits
+  repetitions             : 50
+  success_count           : 50
+  expected_collision_steps: 82137.195303
+  mean_collision_index    : 73897.7400
+  median_collision_index  : 60873.5000
+  min_collision_index     : 2052
+  max_collision_index     : 245431
+  stddev_collision_index  : 49988.7690
+  mean_hash_evaluations   : 424057.8800
+  mean_log2_collision_idx : 15.818089
+  mean_ratio_to_expected  : 0.89968667
+  mean_seconds            : 0.673599
+
+t = 40 bits
+  repetitions             : 30
+  success_count           : 30
+  expected_collision_steps: 1314195.124850
+  mean_collision_index    : 1426379.5000
+  median_collision_index  : 1353002.5000
+  min_collision_index     : 298347
+  max_collision_index     : 3042595
+  stddev_collision_index  : 737713.0226
+  mean_hash_evaluations   : 7917510.6667
+  mean_log2_collision_idx : 20.219530
+  mean_ratio_to_expected  : 1.08536356
+  mean_seconds            : 10.214132
+
+t = 48 bits
+  repetitions             : 10
+  success_count           : 10
+  expected_collision_steps: 21027121.997596
+  mean_collision_index    : 21968321.3000
+  median_collision_index  : 20257778.5000
+  min_collision_index     : 2426086
+  max_collision_index     : 39478342
+  stddev_collision_index  : 11289306.4915
+  mean_hash_evaluations   : 127932019.6000
+  mean_log2_collision_idx : 24.104622
+  mean_ratio_to_expected  : 1.04476120
+  mean_seconds            : 164.574054
+
+t = 56 bits
+  repetitions             : 5
+  success_count           : 5
+  expected_collision_steps: 336433951.961533
+  mean_collision_index    : 405264810.4000
+  median_collision_index  : 533212119.0000
+  min_collision_index     : 84861183
+  max_collision_index     : 545156208
+  stddev_collision_index  : 201936818.7745
+  mean_hash_evaluations   : 1989542798.6000
+  mean_log2_collision_idx : 28.325642
+  mean_ratio_to_expected  : 1.20458951
+  mean_seconds            : 2549.311671
+
