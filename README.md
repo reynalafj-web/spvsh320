@@ -2,7 +2,7 @@
 
 Reference experiment code and raw outputs for:
 
-> Alfajri, R., & Afianti, F. *SpVSH-320: A Sponge-Like Hash Construction with Smooth-Number-Inspired State Transformation.* Manuscript submitted to *PeerJ Computer Science*.
+*SpVSH-320: A Sponge-Like Hash Construction with Smooth-Number-Inspired State Transformation.* Manuscript submitted to *PeerJ Computer Science*.
 
 This snapshot is an **experimental research package**. It is not a production cryptographic library.
 
