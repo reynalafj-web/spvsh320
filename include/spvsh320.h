@@ -1,5 +1,5 @@
 /*
- * SpVSH-320-FR2 standalone library
+ * SpVSH-320 standalone library
  *
  * 320-bit internal state, 256-bit digest, two output-finalization
  * rounds before the first squeezed lane. Unseeded path used in the
