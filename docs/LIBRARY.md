@@ -1,4 +1,4 @@
-# Standalone SpVSH-320-FR2 library
+# Standalone SpVSH-320 library
 
 Files:
 
@@ -20,5 +20,3 @@ python3 src/spvsh320.py          # prints SHA-style hex of hash(b"abc")
 ```
 b93de3c241637be1fee467413f12e749796c8d239130cc281619e2d750afc7b8
 ```
-
-That prefix matches the ESP32 Serial KAT and the SMHasher3 seed=0 path.
